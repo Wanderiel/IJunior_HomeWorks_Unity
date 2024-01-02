@@ -615,6 +615,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _respawnTime: 2
+  _points:
+  - {fileID: 8896086867177537484}
+  - {fileID: 1174036022}
+  - {fileID: 1063610260}
+  - {fileID: 280762455}
+  - {fileID: 465795188}
+  - {fileID: 352178962}
+  - {fileID: 1843942346}
   _prefab: {fileID: 1794666880966262555, guid: 6f7f36b12464fe34dbe815f439b6e3a5, type: 3}
   _pointCollection: {fileID: 2107714374}
 --- !u!4 &1188641987
@@ -636,6 +644,7 @@ Transform:
   - {fileID: 465795188}
   - {fileID: 352178962}
   - {fileID: 1843942346}
+  - {fileID: 2107714374}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -741,8 +750,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1188641987}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8896086867177537483
 PrefabInstance:
