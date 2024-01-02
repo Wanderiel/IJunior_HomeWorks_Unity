@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _respawnTime: 2
+  _count: 5
   _points:
   - {fileID: 8896086867177537484}
   - {fileID: 1174036022}
