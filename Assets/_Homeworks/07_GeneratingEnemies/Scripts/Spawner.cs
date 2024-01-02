@@ -7,6 +7,7 @@ namespace GeneratingEnemies
     {
         [SerializeField] private float _respawnTime = 2f;
         [SerializeField] private Enemy _prefab;
+        [SerializeField] private Transform _pointCollection;
 
         private void Start()
         {
@@ -19,7 +20,8 @@ namespace GeneratingEnemies
 
             foreach (Transform spawnPoint in transform)
             {
-                Instantiate(_prefab, spawnPoint.position, Quaternion.identity);
+                Enemy enemy = Instantiate(_prefab, spawnPoint.position, Quaternion.identity);
+                enemy.SetTarget(_pointCollection.position);
 
                 yield return waitTime;
             }
