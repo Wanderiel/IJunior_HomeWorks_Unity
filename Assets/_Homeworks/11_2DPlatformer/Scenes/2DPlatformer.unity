@@ -960,6 +960,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586306667620551708, guid: 3fa26d0c87380c545a4ab7ddd0cad8c8, type: 3}
+      propertyPath: _groundMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2588436375156953985, guid: 3fa26d0c87380c545a4ab7ddd0cad8c8, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1125,6 +1129,42 @@ PrefabInstance:
     - target: {fileID: 7857878036546309935, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878036949486885, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878037629765592, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878037922871110, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878037954873149, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878037989234786, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878038184712340, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878038276624060, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878038338245615, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857878038556278557, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7857878038561031265, guid: 93916a6dcf4853e43ac37a9adfac1d37, type: 3}
       propertyPath: m_Name
