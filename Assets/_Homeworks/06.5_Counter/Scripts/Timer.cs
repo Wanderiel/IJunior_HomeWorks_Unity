@@ -6,12 +6,11 @@ namespace Counter
 {
     public class Timer : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI _text;
-        [SerializeField] float _speed = 0.5f;
+        [SerializeField] private TextMeshProUGUI _text;
+        [SerializeField] private float _speed = 0.5f;
 
         private float _time;
         private int _score;
-
         private Coroutine _coroutine;
 
         private void Awake()
