@@ -9,54 +9,44 @@ namespace Counter
         [SerializeField] private TextMeshProUGUI _text;
         [SerializeField] private float _speed = 0.5f;
 
-        private float _time;
         private int _score;
+        private WaitForSeconds _wait;
         private Coroutine _coroutine;
 
         private void Awake()
         {
             _score = 0;
+            _wait = new WaitForSeconds(_speed);
             DisplayScore();
         }
 
-        public void SwitchTick()
+        public void SwitchTicking()
         {
             if (_coroutine != null)
             {
-                StopTick();
+                StopTicking();
 
                 return;
             }
 
-            _coroutine = StartCoroutine(TickCoroutine());
+            _coroutine = StartCoroutine(Ticking());
         }
 
-        private IEnumerator TickCoroutine()
+        private IEnumerator Ticking()
         {
             while (true)
             {
-                _time += Time.deltaTime;
-                Scoreup();
+                _score++;
                 DisplayScore();
 
-                yield return null;
+                yield return _wait;
             }
         }
 
-        private void StopTick()
+        private void StopTicking()
         {
             StopCoroutine(_coroutine);
-
             _coroutine = null;
-        }
-
-        private void Scoreup()
-        {
-            if (_time > _speed)
-            {
-                _score++;
-                _time -= _speed;
-            }
         }
 
         private void DisplayScore() =>
