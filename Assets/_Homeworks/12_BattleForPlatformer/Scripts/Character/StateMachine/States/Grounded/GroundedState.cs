@@ -1,4 +1,3 @@
-using System;
 using UnityEngine.InputSystem;
 
 namespace BattleForPlatformer
@@ -40,6 +39,7 @@ namespace BattleForPlatformer
             base.AddInputActionsCallbacks();
 
             InputActions.Movement.Jump.started += OnJumpKeyPressed;
+            InputActions.Movement.Attack.started += OnAttackKeyPressed;
         }
 
         protected override void RemoveInputActionsCallbacks()
@@ -47,9 +47,13 @@ namespace BattleForPlatformer
             base.RemoveInputActionsCallbacks();
 
             InputActions.Movement.Jump.started -= OnJumpKeyPressed;
+            InputActions.Movement.Attack.started -= OnAttackKeyPressed;
         }
 
         private void OnJumpKeyPressed(InputAction.CallbackContext context) =>
             StateSwitcher.SwitchState<JumpingState>();
+
+        private void OnAttackKeyPressed(InputAction.CallbackContext context) =>
+            StateSwitcher.SwitchState<AttackingState>();
     }
 }

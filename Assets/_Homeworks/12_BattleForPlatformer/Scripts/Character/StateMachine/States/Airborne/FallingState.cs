@@ -37,7 +37,6 @@ namespace BattleForPlatformer
                 else
                     StateSwitcher.SwitchState<RunningState>();
             }
-
         }
     }
 }

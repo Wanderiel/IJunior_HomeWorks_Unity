@@ -2,11 +2,13 @@ using UnityEngine;
 
 namespace BattleForPlatformer
 {
+    [RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
     public class Character : MonoBehaviour
     {
         [SerializeField] private CharacterView _view;
         [SerializeField] private CharacterConfig _config;
         [SerializeField] private GroundChecker _groundChecker;
+        [SerializeField] private Animator _animator;
 
         private PlayerInputPro _inputActions;
         private CharacterStateMachine _stateMachine;
@@ -14,6 +16,7 @@ namespace BattleForPlatformer
 
         public PlayerInputPro InputActions => _inputActions;
         public SpriteRenderer SpriteRenderer => _spriteRenderer;
+        public Animator MyAnimator => _animator;
         public CharacterView View => _view;
         public CharacterConfig Config => _config;
         public GroundChecker GroundChecker => _groundChecker;
@@ -30,8 +33,6 @@ namespace BattleForPlatformer
         {
             _stateMachine.HandleInput();
             _stateMachine.Update();
-
-            Debug.Log( _groundChecker.IsGrounded);
         }
 
         public void OnEnable() =>
