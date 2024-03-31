@@ -5,7 +5,7 @@ namespace BattleForPlatformer
     public class AttackingState : GroundedState
     {
         private Animator _animator;
-        private float _delay = 0;
+        private float _delay;
         private float _wait = 0;
 
         public AttackingState(IStateSwitcher stateSwitcher, StateMachineData data, Character character)
